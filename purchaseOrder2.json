@@ -1,0 +1,55 @@
+{
+  "title": "Purchase Order",
+  "supplier": {
+    "companyName": "XYZ Supplier Ltd",
+    "streetAddress": "30 The Yard",
+    "city": "London",
+    "stZip": "SW1 1GH"
+  },
+  "deliveryAddress": {
+    "streetAddress": "5-6 Wood Street",
+    "productType": "Bath",
+    "stZip": "BA1 1BT"
+  },
+  "orderDate": "01/02/2023",
+  "purchaseOrderNumber": "P1001001",
+  "orderedBy": [
+    {
+      "name": "John Buyer",
+      "email": "jonbuyer@ourcomany.com",
+      "phone": "01225 615511",
+      "requiredByDate": "15/2/2023",
+      "jobNumber": 18811,
+      "currency": "GBP"
+    }
+  ],
+  "goodsRequired": [
+    {
+      "qty": 10,
+      "productCode": "RCD255",
+      "unit": "Each",
+      "description": "Green widgets 40 * 30 * 2",
+      "price": 390.00,
+      "totalNet": 3900.00,
+      "tax%": 20,
+      "taxAmount": 780.00,
+      "gross": 4680
+    },
+    {
+      "qty": 1,
+      "productCode": "",
+      "unit": "Each",
+      "description": "Shipping",
+      "price": 20.00,
+      "totalNet": 20.00,
+      "tax%": 20,
+      "taxAmount": 4.00,
+      "gross": 24.00
+    }
+  ],
+  "totalPrice": {
+    "totalNet": "£3920.00",
+    "totalTax": "£784.00",
+    "totalIncTax": "£4704,00"
+  }
+}
