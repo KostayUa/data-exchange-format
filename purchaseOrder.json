@@ -1,6 +1,6 @@
 {
   "company": {
-    "Name": "Delivery of future",
+    "name": "Delivery of future",
     "address": "Soborna av.32",
     "cityStZip": "Ir41400",
     "phone": "(093) 439-0011",
@@ -60,6 +60,6 @@
   "subtotal": 840.00,
   "tax": "",
   "shipping": "",
-  "Other": "",
+  "other": "",
   "total": 840.00
 }

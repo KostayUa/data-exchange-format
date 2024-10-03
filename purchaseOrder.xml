@@ -1,0 +1,65 @@
+<purchaseOrder>
+    <company>
+        <name>Delivery of future</name>
+        <address>Soborna av.32</address>
+        <cityStZip>Ir41400</cityStZip>
+        <phone>(093) 439-0011</phone>
+        <fax>(050) 332-8734</fax>
+        <website>https://delivery.com</website>
+    </company>
+    <date>2024-10-02</date>
+    <number>4515</number>
+    <vendor>
+        <companyName>SavBut</companyName>
+        <department>storage</department>
+        <address>Soborna av.88</address>
+        <cityStZip>Ir41400</cityStZip>
+        <phone>(050) 88-9999</phone>
+        <fax>(097) 35-5593</fax>
+    </vendor>
+    <shipTo>
+        <companyName>private person</companyName>
+        <recipient>address delivery</recipient>
+        <address>Obolon 32</address>
+        <cityStZip>Kv53354</cityStZip>
+        <phone>(050) 09-1492</phone>
+    </shipTo>
+    <currency>USD</currency>
+    <productLines>
+        <productLine>
+            <code>123123</code>
+            <description>ProductABC</description>
+            <quantity>
+                <price>10.00</price>
+                <unit>pcs</unit>
+            </quantity>
+            <price>10.00</price>
+            <total>500.00</total>
+        </productLine>
+        <productLine>
+            <code>456456</code>
+            <description>ProductLMNO</description>
+            <quantity>
+                <value>1</value>
+                <unit>pcs</unit>
+            </quantity>
+            <price>250.00</price>
+            <total>250.00</total>
+        </productLine>
+        <productLine>
+            <code>789789</code>
+            <descrption>ProductXYZ</descrption>
+            <quantity>
+                <value>15</value>
+                <unit>doz.</unit>
+            </quantity>
+            <price>6.00</price>
+            <total>90.00</total>
+        </productLine>
+    </productLines>
+    <subtotal>840.00</subtotal>
+    <tax>null</tax>
+    <shipping>null</shipping>
+    <other>null</other>
+    <total>840.00</total>
+</purchaseOrder>
