@@ -1,0 +1,54 @@
+<purchaseOrder>
+    <supplier>
+        <company>XYZ Supplier Ltd</company>
+        <street>30 The Yard</street>
+        <city>London</city>
+        <stZip>SW1 1GH</stZip>
+    </supplier>
+    <deliveryAddress>
+        <street>5-6 Wood Street</street>
+        <city>Bath</city>
+        <stZip>BA1 1BT</stZip>
+    </deliveryAddress>
+    <orderDate>01/02/2023</orderDate>
+    <purchaseOrderNumber>P1001001</purchaseOrderNumber>
+    <orderedBy>
+        <name>John Buyer</name>
+        <email>jonbuyer@ourcomany.com</email>
+        <phone>01225 615511</phone>
+    </orderedBy>
+    <requiredByDate>15/2/2023</requiredByDate>
+    <jobNumber>18811</jobNumber>
+    <currency>GBP</currency>
+    <goodsRequired>
+        <neededItems>
+            <qty>10</qty>
+            <code>RCD255</code>
+            <unit>Each</unit>
+            <description>Green widgets 40 * 30 * 2</description>
+            <price>390.00</price>
+            <totalNet>3900.00</totalNet>
+            <tax>
+                <percent>20</percent>
+                <amount>780.00</amount>
+            </tax>
+            <gross>4680.00</gross>
+        </neededItems>
+        <neededItems>
+            <qty>1</qty>
+            <productCode>null</productCode>
+            <unit>Each</unit>
+            <description>Shipping</description>
+            <price>20.00</price>
+            <totalNet>20.00</totalNet>
+            <tax>
+                <percentage>20</percentage>
+                <amount>4.00</amount>
+            </tax>
+            <gross>24.00</gross>
+        </neededItems>
+    </goodsRequired>
+    <totalNet>3920.00</totalNet>
+    <totalTax>784.00</totalTax>
+    <tatalIncTax>4704.00</tatalIncTax>
+</purchaseOrder>
