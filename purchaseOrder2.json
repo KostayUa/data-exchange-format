@@ -1,28 +1,25 @@
 {
-  "title": "Purchase Order",
   "supplier": {
-    "companyName": "XYZ Supplier Ltd",
-    "streetAddress": "30 The Yard",
+    "company": "XYZ Supplier Ltd",
+    "street": "30 The Yard",
     "city": "London",
     "stZip": "SW1 1GH"
   },
   "deliveryAddress": {
-    "streetAddress": "5-6 Wood Street",
-    "productType": "Bath",
+    "street": "5-6 Wood Street",
+    "city": "Bath",
     "stZip": "BA1 1BT"
   },
   "orderDate": "01/02/2023",
   "purchaseOrderNumber": "P1001001",
-  "orderedBy": [
-    {
-      "name": "John Buyer",
-      "email": "jonbuyer@ourcomany.com",
-      "phone": "01225 615511",
-      "requiredByDate": "15/2/2023",
-      "jobNumber": 18811,
-      "currency": "GBP"
-    }
-  ],
+  "orderedBy": {
+    "name": "John Buyer",
+    "email": "jonbuyer@ourcomany.com",
+    "phone": "01225 615511"
+  },
+  "requiredByDate": "15/2/2023",
+  "jobNumber": 18811,
+  "currency": "GBP",
   "goodsRequired": [
     {
       "qty": 10,
@@ -31,8 +28,10 @@
       "description": "Green widgets 40 * 30 * 2",
       "price": 390.00,
       "totalNet": 3900.00,
-      "tax%": 20,
-      "taxAmount": 780.00,
+      "tax": {
+        "percentage": 20,
+        "amount": 780.00
+      },
       "gross": 4680
     },
     {
@@ -42,14 +41,14 @@
       "description": "Shipping",
       "price": 20.00,
       "totalNet": 20.00,
-      "tax%": 20,
-      "taxAmount": 4.00,
+      "tax": {
+        "percentage": 20,
+        "amount": 4.00
+      },
       "gross": 24.00
     }
   ],
-  "totalPrice": {
-    "totalNet": "£3920.00",
-    "totalTax": "£784.00",
-    "totalIncTax": "£4704,00"
-  }
+    "totalNet": 3920.00,
+    "totalTax": 784.00,
+    "totalIncTax": 4704.00
 }
