@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="http://www.example.org/purchaseOrder"
+           xmlns="http://www.example.org/purchaseOrder"
+           elementFormDefault="qualified">
+    <xs:element name="purchaseOrder">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="company" type="companyType" maxOccurs="unbounded"/>
+                <xs:element name="date" type="xs:date"/>
+                <xs:element name="number" type="xs:integer"/>
+                <xs:element name="vendor" type="vendorType" maxOccurs="unbounded"/>
+                <xs:element name="shipTo" type="shipToType" maxOccurs="unbounded"/>
+                <xs:element name="currency" type="xs:string"/>
+                <xs:element name="productLines" type="productLinesType"/>
+                <xs:element name="subtotal" type="xs:decimal"/>
+                <xs:element name="tax" type="xs:decimal" minOccurs="0"/>
+                <xs:element name="shipping" type="xs:decimal" minOccurs="0" nillable="true"/>
+                <xs:element name="other" type="xs:decimal" minOccurs="0" nillable="true"/>
+                <xs:element name="total" type="xs:decimal"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:complexType name="companyType">
+        <xs:sequence>
+            <xs:element name="name" type="xs:string"/>
+            <xs:element name="address" type="xs:string"/>
+            <xs:element name="cityStZip" type="xs:string"/>
+            <xs:element name="phone" type="xs:string"/>
+            <xs:element name="fax" type="xs:string"/>
+            <xs:element name="website" type="xs:anyURI"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="vendorType">
+        <xs:sequence>
+            <xs:element name="companyName" type="xs:string"/>
+            <xs:element name="department" type="xs:string"/>
+            <xs:element name="address" type="xs:string"/>
+            <xs:element name="cityStZip" type="xs:string"/>
+            <xs:element name="phone" type="xs:string"/>
+            <xs:element name="fax" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="shipToType">
+        <xs:sequence>
+            <xs:element name="companyName" type="xs:string"/>
+            <xs:element name="recipient" type="xs:string"/>
+            <xs:element name="address" type="xs:string"/>
+            <xs:element name="cityStZip" type="xs:string"/>
+            <xs:element name="phone" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="productLinesType">
+        <xs:sequence>
+            <xs:element name="productLine" type="productLineType" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="productLineType">
+        <xs:sequence>
+            <xs:element name="code" type="xs:string"/>
+            <xs:element name="description" type="xs:string"/>
+            <xs:element name="quantity">
+                <xs:complexType>
+                    <xs:simpleContent>
+                        <xs:extension base="xs:integer">
+                            <xs:attribute name="unit" type="xs:string" use="required"/>
+                        </xs:extension>
+                    </xs:simpleContent>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="price" type="xs:decimal"/>
+            <xs:element name="total" type="xs:decimal"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>

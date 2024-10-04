@@ -30,7 +30,7 @@
       "code": 123123,
       "description": "ProductABC",
       "quantity": {
-        "value": 10,
+        "value": 50,
         "unit": "pcs"
       },
       "price": 10.00,

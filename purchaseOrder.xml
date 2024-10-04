@@ -1,4 +1,7 @@
-<purchaseOrder>
+<?xml version="1.0" encoding="UTF-8"?>
+<purchaseOrder xmlns="http://www.example.org/purchaseOrder"
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xsi:schemaLocation="http://www.example.org/purchaseOrder purchaseOrder.xsd">
     <company>
         <name>Delivery of future</name>
         <address>Soborna av.32</address>
@@ -29,37 +32,28 @@
         <productLine>
             <code>123123</code>
             <description>ProductABC</description>
-            <quantity>
-                <price>10.00</price>
-                <unit>pcs</unit>
-            </quantity>
+            <quantity unit="pcs">50</quantity>
             <price>10.00</price>
             <total>500.00</total>
         </productLine>
         <productLine>
             <code>456456</code>
             <description>ProductLMNO</description>
-            <quantity>
-                <value>1</value>
-                <unit>pcs</unit>
-            </quantity>
+            <quantity unit="pcs">1</quantity>
             <price>250.00</price>
             <total>250.00</total>
         </productLine>
         <productLine>
             <code>789789</code>
-            <descrption>ProductXYZ</descrption>
-            <quantity>
-                <value>15</value>
-                <unit>doz.</unit>
-            </quantity>
+            <description>ProductXYZ</description>
+            <quantity unit="doz">15</quantity>
             <price>6.00</price>
             <total>90.00</total>
         </productLine>
     </productLines>
     <subtotal>840.00</subtotal>
-    <tax>null</tax>
-    <shipping>null</shipping>
-    <other>null</other>
+    <tax>0.00</tax>
+    <shipping>0.00</shipping>
+    <other>0.00</other>
     <total>840.00</total>
 </purchaseOrder>
