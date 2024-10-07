@@ -6,11 +6,11 @@
     <xs:element name="purchaseOrder">
         <xs:complexType>
             <xs:sequence>
-                <xs:element name="company" type="companyType" maxOccurs="unbounded"/>
+                <xs:element name="company" type="companyType"/>
                 <xs:element name="date" type="xs:date"/>
                 <xs:element name="number" type="xs:integer"/>
-                <xs:element name="vendor" type="vendorType" maxOccurs="unbounded"/>
-                <xs:element name="shipTo" type="shipToType" maxOccurs="unbounded"/>
+                <xs:element name="vendor" type="vendorType"/>
+                <xs:element name="shipTo" type="shipToType"/>
                 <xs:element name="currency" type="xs:string"/>
                 <xs:element name="productLines" type="productLinesType"/>
                 <xs:element name="subtotal" type="xs:decimal"/>
@@ -59,17 +59,16 @@
         <xs:sequence>
             <xs:element name="code" type="xs:string"/>
             <xs:element name="description" type="xs:string"/>
-            <xs:element name="quantity">
-                <xs:complexType>
-                    <xs:simpleContent>
-                        <xs:extension base="xs:integer">
-                            <xs:attribute name="unit" type="xs:string" use="required"/>
-                        </xs:extension>
-                    </xs:simpleContent>
-                </xs:complexType>
-            </xs:element>
+            <xs:element name="quantity" type="quantityType"/>
             <xs:element name="price" type="xs:decimal"/>
             <xs:element name="total" type="xs:decimal"/>
         </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="quantityType">
+        <xs:simpleContent>
+            <xs:extension base="xs:integer">
+                <xs:attribute name="unit" type="xs:string" use="required"/>
+            </xs:extension>
+        </xs:simpleContent>
     </xs:complexType>
 </xs:schema>

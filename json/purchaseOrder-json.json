@@ -1,0 +1,177 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "id": "https://example.com/example.json",
+  "title": "Purchase Order Schema",
+  "type": "object",
+  "required": [
+    "company",
+    "date",
+    "number",
+    "vendor",
+    "shipTo",
+    "currency",
+    "productLines",
+    "subtotal",
+    "tax",
+    "shipping",
+    "other",
+    "total"
+  ],
+  "properties": {
+    "company": {
+      "type": "object",
+      "required": [
+        "name",
+        "address",
+        "cityStZip",
+        "phone",
+        "website"
+      ],
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "address": {
+          "type": "string"
+        },
+        "cityStZip": {
+          "type": "string"
+        },
+        "phone": {
+          "type": "string",
+          "pattern": "^(\\([0-9]{3}\\))?[0-9]{3}-[0-9]{4}$"
+        },
+        "fax": {
+          "type": "string"
+        },
+        "website": {
+          "type": "string",
+          "format": "uri"
+        }
+      }
+    },
+    "date": {
+      "type": "string",
+      "format": "date"
+    },
+    "number": {
+      "type": "integer"
+    },
+    "vendor": {
+      "type": "object",
+      "properties": {
+        "companyName": {
+          "type": "string"
+        },
+        "department": {
+          "type": "string"
+        },
+        "address": {
+          "type": "string"
+        },
+        "cityStZip": {
+          "type": "string"
+        },
+        "phone": {
+          "type": "string",
+          "pattern": "^(\\([0-9]{3}\\))?[0-9]{3}-[0-9]{4}$"
+        },
+        "fax": {
+          "type": "string"
+        }
+      }
+    },
+    "shipTo": {
+      "type": "object",
+      "properties": {
+        "companyName": {
+          "type": "string"
+        },
+        "recipient": {
+          "type": "string"
+        },
+        "address": {
+          "type": "string"
+        },
+        "cityStZip": {
+          "type": "string"
+        },
+        "phone": {
+          "type": "string",
+          "pattern": "^(\\([0-9]{3}\\))?[0-9]{3}-[0-9]{4}$"
+        }
+      }
+    },
+    "currency": {
+      "type": "string",
+      "minLength": 3,
+      "maxLength": 3
+    },
+    "productLines": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "code",
+          "description",
+          "quantity",
+          "price",
+          "total"
+        ],
+        "properties": {
+          "code": {
+            "type": "integer"
+          },
+          "description": {
+            "type": "string"
+          },
+          "quantity": {
+            "type": "object",
+            "properties": {
+              "value": {
+                "type": "integer"
+              },
+              "unit": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "value",
+              "unit"
+            ]
+          },
+          "price": {
+            "type": "number"
+          },
+          "total": {
+            "type": "number"
+          }
+        }
+      }
+    },
+    "subtotal": {
+      "type": "number"
+    },
+    "tax": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "shipping": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "other": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "total": {
+      "type": "number"
+    }
+  }
+}
