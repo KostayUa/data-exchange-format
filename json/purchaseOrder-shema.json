@@ -12,9 +12,6 @@
     "currency",
     "productLines",
     "subtotal",
-    "tax",
-    "shipping",
-    "other",
     "total"
   ],
   "properties": {
